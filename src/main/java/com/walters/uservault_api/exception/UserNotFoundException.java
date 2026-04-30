@@ -1,4 +1,7 @@
 package com.walters.uservault_api.exception;
 
-public class UserNotFoundException {
+public class UserNotFoundException extends RuntimeException {
+    public UserNotFoundException(Long id) {
+        super("User not found with id: " + id);
+    }
 }
